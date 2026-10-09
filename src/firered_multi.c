@@ -12,13 +12,13 @@
 
 extern void (*gLinkCallback)(void);
 
-EWRAM_DATA struct FireRedMultiMailbox gFireRedMulti = {0};
-static EWRAM_DATA struct Pokemon sPartyBackup[PARTY_SIZE] = {0};
-static EWRAM_DATA u8 sPartyCount = 0;
-static EWRAM_DATA u8 sReceived = 0;
-static EWRAM_DATA bool8 sActive = FALSE;
-static EWRAM_DATA u32 sHeartbeat = 0;
-static EWRAM_DATA u16 sWaitFrames = 0;
+__attribute__((section("multi_data"))) struct FireRedMultiMailbox gFireRedMulti = {0};
+static __attribute__((section("multi_data"))) struct Pokemon sPartyBackup[PARTY_SIZE] = {0};
+static __attribute__((section("multi_data"))) u8 sPartyCount = 0;
+static __attribute__((section("multi_data"))) u8 sReceived = 0;
+static __attribute__((section("multi_data"))) bool8 sActive = FALSE;
+static __attribute__((section("multi_data"))) u32 sHeartbeat = 0;
+static __attribute__((section("multi_data"))) u16 sWaitFrames = 0;
 
 bool8 FireRedMulti_Active(void) { return sActive; }
 

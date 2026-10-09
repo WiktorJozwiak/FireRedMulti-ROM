@@ -41,6 +41,7 @@ SECTIONS {
         src/*.o(COMMON);
 
         *libc.a:sbrkr.o(COMMON);
+        src/firered_multi.o(multi_data);
         end = .;
     } > IWRAM
 
