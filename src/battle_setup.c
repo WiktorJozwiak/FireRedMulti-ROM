@@ -1,4 +1,5 @@
 #include "global.h"
+#include "firered_multi.h"
 #include "task.h"
 #include "help_system.h"
 #include "overworld.h"
@@ -216,6 +217,12 @@ static void CreateBattleStartTask(u8 transition, u16 song) // song == 0 means de
 
     gTasks[taskId].tTransition = transition;
     PlayMapChosenOrBattleBGM(song);
+}
+
+void FireRedMulti_StartBattle(void)
+{
+    LockPlayerFieldControls();
+    CreateBattleStartTask(B_TRANSITION_SLICE, 0);
 }
 
 static bool8 CheckSilphScopeInPokemonTower(u16 mapGroup, u16 mapNum)

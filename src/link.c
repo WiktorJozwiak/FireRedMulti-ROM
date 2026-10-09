@@ -1,4 +1,5 @@
 #include "global.h"
+#include "firered_multi.h"
 #include "gflib.h"
 #include "m4a.h"
 #include "scanline_effect.h"
@@ -758,6 +759,7 @@ void ClearLinkCallback_2(void)
 
 u8 GetLinkPlayerCount(void)
 {
+    if (FireRedMulti_Active()) return 2;
     if (gWirelessCommType)
         return Rfu_GetLinkPlayerCount();
 
@@ -964,6 +966,7 @@ static void SendBerryBlenderNoSpaceForPokeblocks(void)
 
 u8 GetMultiplayerId(void)
 {
+    if (FireRedMulti_Active()) return gFireRedMulti.playerId;
     if (gWirelessCommType == 1)
         return Rfu_GetMultiplayerId();
 
@@ -980,6 +983,7 @@ u8 BitmaskAllOtherLinkPlayers(void)
 
 bool8 SendBlock(u8 unused, const void *src, u16 size)
 {
+    if (FireRedMulti_Active()) return FireRedMulti_SendBlock(src, size);
     if (gWirelessCommType == 1)
         return Rfu_InitBlockSend(src, size);
 
@@ -1002,6 +1006,7 @@ bool8 SendBlockRequest(u8 blockRequestType)
 
 bool8 IsLinkTaskFinished(void)
 {
+    if (FireRedMulti_Active()) return FireRedMulti_SendFinished();
     if (gWirelessCommType == 1)
         return IsLinkRfuTaskFinished();
 
@@ -1010,6 +1015,7 @@ bool8 IsLinkTaskFinished(void)
 
 u8 GetBlockReceivedStatus(void)
 {
+    if (FireRedMulti_Active()) return FireRedMulti_Received();
     if (gWirelessCommType == 1)
         return Rfu_GetBlockReceivedStatus();
 
@@ -1027,6 +1033,7 @@ static void SetBlockReceivedFlag(u8 who)
 void ResetBlockReceivedFlags(void)
 {
     int i;
+    if (FireRedMulti_Active()) { FireRedMulti_ResetReceived(3); return; }
 
     if (gWirelessCommType == 1)
     {
@@ -1042,6 +1049,7 @@ void ResetBlockReceivedFlags(void)
 
 void ResetBlockReceivedFlag(u8 who)
 {
+    if (FireRedMulti_Active()) { FireRedMulti_ResetReceived(1 << who); return; }
     if (gWirelessCommType == 1)
         Rfu_ResetBlockReceivedFlag(who);
     else if (gBlockReceivedStatus[who])
@@ -1261,11 +1269,13 @@ void ResetLinkPlayerCount(void)
 
 u8 GetLinkPlayerCount_2(void)
 {
+    if (FireRedMulti_Active()) return 2;
     return EXTRACT_PLAYER_COUNT(gLinkStatus);
 }
 
 bool8 IsLinkMaster(void)
 {
+    if (FireRedMulti_Active()) return gFireRedMulti.playerId == 0;
     if (gWirelessCommType)
         return Rfu_IsMaster();
 
@@ -1639,6 +1649,8 @@ bool8 HandleLinkConnection(void)
 {
     bool32 main1Failed;
     bool32 main2Failed;
+
+    if (FireRedMulti_Active()) return FALSE;
 
     if (gWirelessCommType == 0)
     {

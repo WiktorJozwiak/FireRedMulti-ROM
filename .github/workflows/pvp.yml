@@ -1,0 +1,41 @@
+name: FireRedMulti PvP prototype
+on:
+  push:
+    branches: [codex/pvp-prototype]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: prototype
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          path: baseline
+      - uses: actions/checkout@v4
+        with:
+          repository: pret/agbcc
+          path: agbcc
+      - name: Install build dependencies
+        run: sudo apt-get update -qq && sudo apt-get install -y build-essential binutils-arm-none-eabi libpng-dev
+      - name: Build compiler
+        working-directory: agbcc
+        run: ./build.sh && ./install.sh ../baseline && ./install.sh ../prototype
+      - name: Verify original FireRed baseline
+        working-directory: baseline
+        run: make -j2 COMPARE=1
+      - name: Compile PvP prototype and symbols
+        working-directory: prototype
+        run: make -j2 COMPARE=0 all syms
+      - name: Generate patch and ABI manifest
+        working-directory: prototype
+        run: python3 tools/firered_multi_patch.py ../baseline/pokefirered.gba pokefirered.gba ../artifacts
+      - uses: actions/upload-artifact@v4
+        with:
+          name: FireRedMulti-PvP-patch
+          path: artifacts/
+          retention-days: 7

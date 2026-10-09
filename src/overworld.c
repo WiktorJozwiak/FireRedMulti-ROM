@@ -1,4 +1,5 @@
 #include "global.h"
+#include "firered_multi.h"
 #include "gflib.h"
 #include "bg_regs.h"
 #include "cable_club.h"
@@ -3561,3 +3562,9 @@ static void SpriteCB_LinkPlayer(struct Sprite *sprite)
         sprite->data[7]++;
     }
 }
+
+bool8 FireRedMulti_CanStart(void)
+{
+    return gMain.callback2 == CB2_Overworld && !ScriptContext_IsEnabled() && !gPaletteFade.active;
+}
+

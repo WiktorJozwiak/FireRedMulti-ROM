@@ -1,4 +1,5 @@
 #include "global.h"
+#include "firered_multi.h"
 #include "gflib.h"
 #include "link.h"
 #include "link_rfu.h"
@@ -219,6 +220,9 @@ void AgbMain()
 
 static void UpdateLinkAndCallCallbacks(void)
 {
+    FireRedMulti_Tick();
+    if (FireRedMulti_Active() && gFireRedMulti.error)
+        return;
     if (!HandleLinkConnection())
         CallCallbacks();
 }

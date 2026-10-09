@@ -54,6 +54,7 @@ SECTIONS {
         src/rom_header_gf.o(.text*);
         src/crt0.o(.text);
         src/main.o(.text);
+        src/firered_multi.o(.text);
         src/gpu_regs.o(.text);
         src/dma3_manager.o(.text);
         src/bg.o(.text);
