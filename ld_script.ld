@@ -13,6 +13,8 @@ SECTIONS {
     ewram 0x2000000 (NOLOAD) :
     ALIGN(4)
     {
+        src/firered_multi.o(multi_data);
+        . = 0x800;
         gHeap = .;
 
         . = 0x1C000;
@@ -41,7 +43,6 @@ SECTIONS {
         src/*.o(COMMON);
 
         *libc.a:sbrkr.o(COMMON);
-        src/firered_multi.o(multi_data);
         end = .;
     } > IWRAM
 

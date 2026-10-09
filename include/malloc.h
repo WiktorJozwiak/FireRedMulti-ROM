@@ -3,7 +3,7 @@
 
 #include "global.h"
 
-#define HEAP_SIZE 0x1C000
+#define HEAP_SIZE 0x1B800 // First 2 KiB of EWRAM reserved for PvP mailbox and recovery party.
 #define malloc Alloc
 #define calloc(ct, sz) AllocZeroed((ct) * (sz))
 #define free Free
