@@ -3566,7 +3566,8 @@ static void SpriteCB_LinkPlayer(struct Sprite *sprite)
 bool8 FireRedMulti_CanStart(void)
 {
     return gMain.callback2 == CB2_Overworld
-        && !ScriptContext_IsEnabled() && !gPaletteFade.active
+        && !ScriptContext_IsEnabled() && !ArePlayerFieldControlsLocked() && !gPaletteFade.active
+        && (REG_DISPCNT & DISPCNT_OBJ_ON)
         && gQuestLogState != QL_STATE_PLAYBACK && gQuestLogState != QL_STATE_PLAYBACK_LAST;
 }
 
