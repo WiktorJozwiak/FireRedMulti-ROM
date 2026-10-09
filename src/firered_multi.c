@@ -47,7 +47,7 @@ static void FinishBattle(void)
 
 bool8 FireRedMulti_SendBlock(const void *src, u16 size)
 {
-    if (!FireRedMulti_SendFinished() || size == 0 || size > FR_MULTI_PAYLOAD)
+    if (!FireRedMulti_SendFinished() || size == 0 || size > sizeof(gBlockRecvBuffer[0]))
         return FALSE;
     memcpy(gFireRedMulti.tx, src, size);
     memcpy(gBlockRecvBuffer[gFireRedMulti.playerId], src, size);
@@ -125,7 +125,7 @@ void FireRedMulti_Tick(void)
     }
     if (gFireRedMulti.rxSeq != gFireRedMulti.rxAck && !(sReceived & (1 << (gFireRedMulti.playerId ^ 1))))
     {
-        if (gFireRedMulti.rxSeq != gFireRedMulti.rxAck + 1 || !gFireRedMulti.rxSize || gFireRedMulti.rxSize > FR_MULTI_PAYLOAD)
+        if (gFireRedMulti.rxSeq != gFireRedMulti.rxAck + 1 || !gFireRedMulti.rxSize || gFireRedMulti.rxSize > sizeof(gBlockRecvBuffer[0]))
             gFireRedMulti.error = 3;
         else
         {
