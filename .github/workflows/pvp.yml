@@ -33,7 +33,11 @@ jobs:
         run: make -j2 COMPARE=0 all syms
       - name: Generate patch and ABI manifest
         working-directory: prototype
-        run: python3 tools/firered_multi_patch.py ../baseline/pokefirered.gba pokefirered.gba ../artifacts
+        run: |
+          python3 tools/firered_multi_patch.py ../baseline/pokefirered.gba pokefirered.gba ../artifacts
+          arm-none-eabi-objdump -d --disassemble=UpdateLinkAndCallCallbacks pokefirered.elf > ../artifacts/host-hook.txt
+          arm-none-eabi-objdump -d --disassemble=FireRedMulti_Tick pokefirered.elf > ../artifacts/mailbox-hook.txt
+          cp pokefirered.map ../artifacts/layout.map
       - uses: actions/upload-artifact@v4
         with:
           name: FireRedMulti-PvP-patch
