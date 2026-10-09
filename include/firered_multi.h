@@ -34,6 +34,7 @@ bool8 FireRedMulti_Active(void);
 bool8 FireRedMulti_CanStart(void);
 void FireRedMulti_Tick(void);
 void FireRedMulti_StartBattle(void);
+void FireRedMulti_CloseLink(void);
 bool8 FireRedMulti_SendBlock(const void *src, u16 size);
 bool8 FireRedMulti_SendFinished(void);
 u8 FireRedMulti_Received(void);

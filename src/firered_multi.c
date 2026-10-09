@@ -22,6 +22,14 @@ static __attribute__((section("multi_data"))) u16 sWaitFrames = 0;
 
 bool8 FireRedMulti_Active(void) { return sActive; }
 
+void FireRedMulti_CloseLink(void)
+{
+    // Both browsers must observe the native end callback before restoring.
+    // Keep transport tasks alive to drain the final controller acknowledgements.
+    gFireRedMulti.outcome = gBattleOutcome & ~B_OUTCOME_LINK_BATTLE_RAN;
+    gFireRedMulti.state = 3;
+}
+
 static void FinishBattle(void)
 {
     memcpy(gPlayerParty, sPartyBackup, sizeof(sPartyBackup));

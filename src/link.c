@@ -1307,6 +1307,11 @@ void SetCloseLinkCallbackAndType(u16 type)
 
 void SetCloseLinkCallback(void)
 {
+    if (FireRedMulti_Active())
+    {
+        FireRedMulti_CloseLink();
+        return;
+    }
     if (gWirelessCommType == 1)
     {
         Rfu_SetCloseLinkCallback();
