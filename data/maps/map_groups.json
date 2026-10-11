@@ -240,7 +240,8 @@
     "MultiArena",
     "MultiArena_Mart",
     "MultiArena_Center",
-    "MultiArena_Vendor"
+    "MultiArena_Vendor",
+    "MultiArena_Colosseum"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",

@@ -1368,3 +1368,5 @@ Text_TestMsg::
 	.include "data/maps/MultiArena_Center/scripts.inc"
 
 	.include "data/maps/MultiArena_Vendor/scripts.inc"
+
+	.include "data/maps/MultiArena_Colosseum/scripts.inc"

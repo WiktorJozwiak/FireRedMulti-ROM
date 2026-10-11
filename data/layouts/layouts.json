@@ -4410,6 +4410,18 @@
       "secondary_tileset": "gTileset_CeruleanCity",
       "border_filepath": "data/layouts/MultiArena/border.bin",
       "blockdata_filepath": "data/layouts/MultiArena/map.bin"
+    },
+    {
+      "id": "LAYOUT_MULTI_ARENA_COLOSSEUM",
+      "name": "MultiArena_Colosseum_Layout",
+      "width": 32,
+      "height": 26,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_CeruleanCity",
+      "border_filepath": "data/layouts/MultiArena_Colosseum/border.bin",
+      "blockdata_filepath": "data/layouts/MultiArena_Colosseum/map.bin"
     }
   ]
 }

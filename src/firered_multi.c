@@ -71,6 +71,13 @@ void FireRedMulti_ResetReceived(u8 mask) { sReceived &= ~mask; }
 void FireRedMulti_Tick(void)
 {
     u8 i;
+    // The native B button must always let the player leave the reward shop,
+    // including when the browser panel is outside the emulator viewport.
+    if (gMultiArena.magic == 0x414E5246 && gMultiArena.event == 1 && (gMain.newKeys & B_BUTTON))
+    {
+        gMultiArena.result = 0;
+        gMultiArena.ack = gMultiArena.seq;
+    }
     if (gMultiArena.magic == 0x414E5246 && (gMultiArena.event == 1 || gMultiArena.event == 2) && gMultiArena.seq == gMultiArena.ack)
     {
         gSpecialVar_Result = gMultiArena.result;
