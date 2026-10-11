@@ -1362,3 +1362,9 @@ Text_TestMsg::
 	.include "data/text/pokedude.inc"
 
     .include "data/maps/MultiArena/scripts.inc"
+
+	.include "data/maps/MultiArena_Mart/scripts.inc"
+
+	.include "data/maps/MultiArena_Center/scripts.inc"
+
+	.include "data/maps/MultiArena_Vendor/scripts.inc"

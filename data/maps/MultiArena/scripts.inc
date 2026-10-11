@@ -45,6 +45,9 @@ MultiArena_Vendor::
 MultiArena_Trainer::
 	lock
 	faceplayer
+	specialvar VAR_RESULT, CountPartyNonEggMons
+	compare VAR_RESULT, 0
+	goto_if_eq MultiArena_Done
 	msgbox MultiArena_TrainerText, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq MultiArena_Done

@@ -237,7 +237,10 @@
     "OneIsland_KindleRoad_EmberSpa",
     "BirthIsland_Harbor",
     "NavelRock_Harbor",
-    "MultiArena"
+    "MultiArena",
+    "MultiArena_Mart",
+    "MultiArena_Center",
+    "MultiArena_Vendor"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",
