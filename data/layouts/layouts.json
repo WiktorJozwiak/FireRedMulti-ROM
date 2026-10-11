@@ -4402,11 +4402,11 @@
     {
       "id": "LAYOUT_MULTI_ARENA",
       "name": "MultiArena_Layout",
-      "width": 56,
-      "height": 48,
+      "width": 48,
+      "height": 36,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_MultiArenaPrimary",
       "secondary_tileset": "gTileset_MultiArena",
       "border_filepath": "data/layouts/MultiArena/border.bin",
       "blockdata_filepath": "data/layouts/MultiArena/map.bin"

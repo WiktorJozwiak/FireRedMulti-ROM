@@ -204,3 +204,6 @@ const u32 gMetatileAttributes_HallOfFame[] = INCBIN_U32("data/tilesets/secondary
 
 const u16 gMetatiles_MultiArena[] = INCBIN_U16("data/tilesets/secondary/multi_arena/metatiles.bin");
 const u32 gMetatileAttributes_MultiArena[] = INCBIN_U32("data/tilesets/secondary/multi_arena/metatile_attributes.bin");
+
+const u16 gMetatiles_MultiArenaPrimary[] = INCBIN_U16("data/tilesets/primary/multi_arena/metatiles.bin");
+const u32 gMetatileAttributes_MultiArenaPrimary[] = INCBIN_U32("data/tilesets/primary/multi_arena/metatile_attributes.bin");

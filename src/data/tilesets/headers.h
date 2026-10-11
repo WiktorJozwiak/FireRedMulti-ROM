@@ -757,3 +757,5 @@ const struct Tileset gTileset_MultiArena =
     .metatileAttributes = gMetatileAttributes_MultiArena,
     .callback = InitTilesetAnim_MultiArena,
 };
+
+const struct Tileset gTileset_MultiArenaPrimary = { .isCompressed=TRUE, .isSecondary=FALSE, .tiles=gTilesetTiles_MultiArenaPrimary, .palettes=gTilesetPalettes_MultiArenaPrimary, .metatiles=gMetatiles_MultiArenaPrimary, .metatileAttributes=gMetatileAttributes_MultiArenaPrimary, .callback=NULL };

@@ -1,20 +1,20 @@
-# Arena district art
+# Reference arena district
 
-Colosseum and fountain supplied by the project owner as PNG source artwork.
-Normalized to native GBA resolution: colosseum 160x96, fountain 48x64.
-Transparency is palette index zero. Original download files are unchanged.
+The map now uses its own primary and secondary tilesets. Buildings, trees,
+paving, fences, benches, lamps, statue, gardens, shoreline and bridge assets
+were extracted from the owner's image `Symetryczne miasto areny nad wod¹.png`.
+Colosseum and fountain also use the separately supplied PNG artwork.
+Original user files remain unchanged. Native-resolution indexed sources are
+in `source/reference`. GBA transparent color is index zero.
 
-Bench (32x16), lamp (16x48), statue (32x48) generated with built-in imagegen,
-then converted to a shared 15-color palette for GBA tile encoding.
-Prompt: Three isolated overworld pixel-art assets, Pokemon FireRed style:
-wooden park bench, dark navy street lamp with cream glass, gray dragon statue
-on stone pedestal. Transparent background, front three-quarter top-down view,
-coarse readable pixels, no ground or text.
+1009 of 1024 background tile slots; 13 independent 15-color palettes.
+Primary bank: 640 tiles; secondary bank: 384 slots. Native General/Cerulean
+terrain is not used by this district. Other maps retain their own tilesets.
+The fountain rim is stable; only its blue water pixels animate.
 
-The packed secondary tileset uses 347 of 384 tile slots. Building art uses
-palette 9, fountain palette 10, decorations palette 11. Native roofs use
-palette 12 and their red variant palette 7. Fountain rim stays fixed; only
-blue water pixels change across the four animation frames.
+Map 48x36. Cerulean bridge arrival (6,12), exit x=1/y=11..12.
+Doorways: supplies (14,14), center (33,14), rewards (37,25),
+colosseum (24,4). Return from colosseum (24,5).
 
-Main map: 56x48. Entry from Cerulean: (6,25), exit west: x=2,y=24..26.
-Colosseum doorway: (28,7), return from colosseum: (28,8).
+The earlier imagegen decorations in source/bench.png, lamp.png and statue.png
+are retained as unused variants. The current map uses the reference crops.
