@@ -29,7 +29,7 @@ for line in pathlib.Path('pokefirered.sym').read_text().splitlines():
     if len(parts)>=2:
         try:symbols[parts[-1]]=int(parts[0],16)
         except ValueError:pass
-names=['gFireRedMulti','gPlayerParty','gPlayerPartyCount','gMain','CB2_Overworld','gSaveBlock1Ptr','gSaveBlock2Ptr','gPokemonStoragePtr']
+names=['gMultiArena','gFireRedMulti','gPlayerParty','gPlayerPartyCount','gMain','CB2_Overworld','gSaveBlock1Ptr','gSaveBlock2Ptr','gPokemonStoragePtr']
 manifest={'abi':1,'sourceCRC32':zlib.crc32(source),'targetCRC32':zlib.crc32(target),'symbols':{name:symbols[name] for name in names},'mailboxSize':1088}
 (out/'FireRedMulti-PvP.json').write_text(json.dumps(manifest,indent=2))
 print('BPS patch bytes:',len(patch))

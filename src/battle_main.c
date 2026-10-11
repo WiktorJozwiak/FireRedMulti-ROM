@@ -1,4 +1,5 @@
 #include "global.h"
+#include "multi_arena.h"
 #include "gflib.h"
 #include "battle.h"
 #include "battle_anim.h"
@@ -1542,6 +1543,9 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
     u32 personalityValue;
     u8 fixedIV;
     s32 i, j;
+
+    if (gMultiArena.event == 5)
+        return FireRedMulti_ArenaParty(party);
 
     if (trainerNum == TRAINER_SECRET_BASE)
         return 0;

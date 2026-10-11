@@ -1,4 +1,5 @@
 #include "global.h"
+#include "multi_arena.h"
 #include "firered_multi.h"
 #include "task.h"
 #include "help_system.h"
@@ -1074,4 +1075,23 @@ const u8 *GetTrainerWonSpeech(void)
 static const u8 *GetTrainerCantBattleSpeech(void)
 {
     return ReturnEmptyStringIfNull(sTrainerCannotBattleSpeech);
+}
+
+static void CB2_EndMultiArenaBattle(void)
+{
+    gMultiArena.outcome = gBattleOutcome;
+    gMultiArena.event = 3;
+    gMultiArena.seq++;
+    HealPlayerParty();
+    SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
+}
+void FireRedMulti_ArenaBattle(void)
+{
+    gMultiArena.event = 5;
+    gMultiArena.outcome = 0;
+    gTrainerBattleOpponent_A = TRAINER_YOUNGSTER_BEN;
+    gBattleTypeFlags = BATTLE_TYPE_TRAINER;
+    gMain.savedCallback = CB2_EndMultiArenaBattle;
+    CreateBattleStartTask(B_TRANSITION_SLICE, 0);
+    ScriptContext_Stop();
 }

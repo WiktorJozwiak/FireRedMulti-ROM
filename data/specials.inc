@@ -452,4 +452,6 @@ gSpecials::
 	def_special UpdateLoreleiDollCollection
 	def_special LoopWingFlapSound
 	def_special CreateEnemyEventMon
+	def_special FireRedMulti_ArenaRequest
+	def_special FireRedMulti_ArenaBattle
 gSpecialsEnd::

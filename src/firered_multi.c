@@ -1,5 +1,7 @@
 #include "global.h"
 #include "firered_multi.h"
+#include "multi_arena.h"
+#include "event_data.h"
 #include "battle.h"
 #include "battle_main.h"
 #include "link.h"
@@ -19,6 +21,7 @@ static __attribute__((section("multi_data"))) u8 sReceived = 0;
 static __attribute__((section("multi_data"))) bool8 sActive = FALSE;
 static __attribute__((section("multi_data"))) u32 sHeartbeat = 0;
 static __attribute__((section("multi_data"))) u16 sWaitFrames = 0;
+__attribute__((section("multi_data"))) struct MultiArenaChannel gMultiArena = {0};
 
 bool8 FireRedMulti_Active(void) { return sActive; }
 
@@ -68,6 +71,12 @@ void FireRedMulti_ResetReceived(u8 mask) { sReceived &= ~mask; }
 void FireRedMulti_Tick(void)
 {
     u8 i;
+    if (gMultiArena.magic == 0x414E5246 && (gMultiArena.event == 1 || gMultiArena.event == 2) && gMultiArena.seq == gMultiArena.ack)
+    {
+        gSpecialVar_Result = gMultiArena.result;
+        gMultiArena.event = 0;
+        ScriptContext_Enable();
+    }
     if (gFireRedMulti.magic != FR_MULTI_MAGIC)
     {
         memset(&gFireRedMulti, 0, sizeof(gFireRedMulti));
