@@ -128,20 +128,13 @@
       "elevation": 0,
       "dest_map": "MAP_MULTI_ARENA_COLOSSEUM",
       "dest_warp_id": "0"
-    },
-    {
-      "x": 20,
-      "y": 31,
-      "elevation": 3,
-      "dest_map": "MAP_CERULEAN_CITY",
-      "dest_warp_id": "14"
     }
   ],
   "coord_events": [
     {
       "type": "trigger",
-      "x": 18,
-      "y": 34,
+      "x": 1,
+      "y": 23,
       "elevation": 3,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -149,8 +142,8 @@
     },
     {
       "type": "trigger",
-      "x": 19,
-      "y": 34,
+      "x": 1,
+      "y": 24,
       "elevation": 3,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -158,26 +151,8 @@
     },
     {
       "type": "trigger",
-      "x": 20,
-      "y": 34,
-      "elevation": 3,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "MultiArena_Exit"
-    },
-    {
-      "type": "trigger",
-      "x": 21,
-      "y": 34,
-      "elevation": 3,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "MultiArena_Exit"
-    },
-    {
-      "type": "trigger",
-      "x": 22,
-      "y": 34,
+      "x": 1,
+      "y": 25,
       "elevation": 3,
       "var": "VAR_TEMP_0",
       "var_value": "0",

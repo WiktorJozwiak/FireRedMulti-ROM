@@ -6,13 +6,13 @@ MultiArena_Entrance::
 	msgbox MultiArena_EntranceText, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq MultiArena_Done
-	warp MAP_MULTI_ARENA, 255, 20, 31
+	warp MAP_MULTI_ARENA, 255, 3, 24
 	waitstate
 	release
 	end
 MultiArena_Exit::
 	lockall
-	warp MAP_CERULEAN_CITY, 255, 11, 24
+	warp MAP_CERULEAN_CITY, 255, 44, 27
 	waitstate
 	releaseall
 	end
@@ -130,3 +130,15 @@ MultiArena_Chatter5::
 	end
 MultiArena_Chatter5Text::
 	.string "The POKEMON CENTER is free.\nRest your team before the next\pmatch!$"
+
+MultiArena_EnterSideGate::
+	lockall
+	warp MAP_MULTI_ARENA, 255, 3, 24
+	waitstate
+	releaseall
+	end
+MultiArena_GateSign::
+	msgbox MultiArena_GateSignText, MSGBOX_SIGN
+	end
+MultiArena_GateSignText::
+	.string "MULTI ARENA\nFollow the path east!$"
