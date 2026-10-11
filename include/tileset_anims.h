@@ -14,3 +14,5 @@ void InitTilesetAnim_SilphCo(void);
 void InitTilesetAnim_MtEmber(void);
 
 #endif // GUARD_TILESET_ANIMS_H
+
+void InitTilesetAnim_MultiArena(void);

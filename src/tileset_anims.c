@@ -330,3 +330,16 @@ void InitTilesetAnim_CeladonGym(void)
     sSecondaryTilesetAnimCounterMax = 256;
     sSecondaryTilesetAnimCallback = TilesetAnim_CeladonGym;
 }
+
+static void TilesetAnim_MultiArena(u16 timer)
+{
+    if (timer % 12 == 0)
+        AppendTilesetAnimToBuffer(sTilesetAnims_CeladonCity_Fountain[(timer / 12) % ARRAY_COUNT(sTilesetAnims_CeladonCity_Fountain)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(830)), 8 * TILE_SIZE_4BPP);
+}
+
+void InitTilesetAnim_MultiArena(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = 120;
+    sSecondaryTilesetAnimCallback = TilesetAnim_MultiArena;
+}
