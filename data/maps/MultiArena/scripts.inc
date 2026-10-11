@@ -6,7 +6,7 @@ MultiArena_Entrance::
 	msgbox MultiArena_EntranceText, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq MultiArena_Done
-	warp MAP_MULTI_ARENA, 255, 3, 24
+	warp MAP_MULTI_ARENA, 255, 6, 25
 	waitstate
 	release
 	end
@@ -73,7 +73,7 @@ MultiArena_TrainerText::
 
 MultiArena_LeaveColosseum::
 	lockall
-	warp MAP_MULTI_ARENA, 255, 20, 12
+	warp MAP_MULTI_ARENA, 255, 28, 8
 	waitstate
 	releaseall
 	end
@@ -133,7 +133,7 @@ MultiArena_Chatter5Text::
 
 MultiArena_EnterSideGate::
 	lockall
-	warp MAP_MULTI_ARENA, 255, 3, 24
+	warp MAP_MULTI_ARENA, 255, 6, 25
 	waitstate
 	releaseall
 	end

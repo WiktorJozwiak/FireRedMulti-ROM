@@ -331,15 +331,44 @@ void InitTilesetAnim_CeladonGym(void)
     sSecondaryTilesetAnimCallback = TilesetAnim_CeladonGym;
 }
 
+static const u16 sMultiArenaFountain0[] = INCBIN_U16("data/tilesets/secondary/multi_arena/anim/fountain/0.4bpp");
+static const u16 sMultiArenaFountain1[] = INCBIN_U16("data/tilesets/secondary/multi_arena/anim/fountain/1.4bpp");
+static const u16 sMultiArenaFountain2[] = INCBIN_U16("data/tilesets/secondary/multi_arena/anim/fountain/2.4bpp");
+static const u16 sMultiArenaFountain3[] = INCBIN_U16("data/tilesets/secondary/multi_arena/anim/fountain/3.4bpp");
+
+static const u16 *const sMultiArenaFountainFrames[] = {sMultiArenaFountain0, sMultiArenaFountain1, sMultiArenaFountain2, sMultiArenaFountain3};
+static const u16 sMultiArenaFountain0[] = INCBIN_U16("data/tilesets/secondary/multi_arena/anim/fountain/0.4bpp");
+static const u16 sMultiArenaFountain1[] = INCBIN_U16("data/tilesets/secondary/multi_arena/anim/fountain/1.4bpp");
+static const u16 sMultiArenaFountain2[] = INCBIN_U16("data/tilesets/secondary/multi_arena/anim/fountain/2.4bpp");
+static const u16 sMultiArenaFountain3[] = INCBIN_U16("data/tilesets/secondary/multi_arena/anim/fountain/3.4bpp");
+
+static const u16 *const sMultiArenaFountainFrames[] = {sMultiArenaFountain0, sMultiArenaFountain1, sMultiArenaFountain2, sMultiArenaFountain3};
+static const u16 sMultiArenaFountain0[] = INCBIN_U16("data/tilesets/secondary/multi_arena/anim/fountain/0.4bpp");
+static const u16 sMultiArenaFountain1[] = INCBIN_U16("data/tilesets/secondary/multi_arena/anim/fountain/1.4bpp");
+static const u16 sMultiArenaFountain2[] = INCBIN_U16("data/tilesets/secondary/multi_arena/anim/fountain/2.4bpp");
+static const u16 sMultiArenaFountain3[] = INCBIN_U16("data/tilesets/secondary/multi_arena/anim/fountain/3.4bpp");
+
+static const u16 *const sMultiArenaFountainFrames[] = {sMultiArenaFountain0, sMultiArenaFountain1, sMultiArenaFountain2, sMultiArenaFountain3};
+static const u16 sMultiArenaFountain0[] = INCBIN_U16("data/tilesets/secondary/multi_arena/anim/fountain/0.4bpp");
+static const u16 sMultiArenaFountain1[] = INCBIN_U16("data/tilesets/secondary/multi_arena/anim/fountain/1.4bpp");
+static const u16 sMultiArenaFountain2[] = INCBIN_U16("data/tilesets/secondary/multi_arena/anim/fountain/2.4bpp");
+static const u16 sMultiArenaFountain3[] = INCBIN_U16("data/tilesets/secondary/multi_arena/anim/fountain/3.4bpp");
+
+static const u16 *const sMultiArenaFountainFrames[] = {sMultiArenaFountain0, sMultiArenaFountain1, sMultiArenaFountain2, sMultiArenaFountain3};
+static const u16 sMultiArenaFountain0[] = INCBIN_U16("data/tilesets/secondary/multi_arena/anim/fountain/0.4bpp");
+static const u16 sMultiArenaFountain1[] = INCBIN_U16("data/tilesets/secondary/multi_arena/anim/fountain/1.4bpp");
+static const u16 sMultiArenaFountain2[] = INCBIN_U16("data/tilesets/secondary/multi_arena/anim/fountain/2.4bpp");
+static const u16 sMultiArenaFountain3[] = INCBIN_U16("data/tilesets/secondary/multi_arena/anim/fountain/3.4bpp");
+
+static const u16 *const sMultiArenaFountainFrames[] = {sMultiArenaFountain0, sMultiArenaFountain1, sMultiArenaFountain2, sMultiArenaFountain3};
 static void TilesetAnim_MultiArena(u16 timer)
 {
     if (timer % 12 == 0)
-        AppendTilesetAnimToBuffer(sTilesetAnims_CeladonCity_Fountain[(timer / 12) % ARRAY_COUNT(sTilesetAnims_CeladonCity_Fountain)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(830)), 8 * TILE_SIZE_4BPP);
+        AppendTilesetAnimToBuffer(sMultiArenaFountainFrames[(timer / 12) % 4], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(939)), 48 * TILE_SIZE_4BPP);
 }
-
 void InitTilesetAnim_MultiArena(void)
 {
     sSecondaryTilesetAnimCounter = 0;
-    sSecondaryTilesetAnimCounterMax = 120;
+    sSecondaryTilesetAnimCounterMax = 48;
     sSecondaryTilesetAnimCallback = TilesetAnim_MultiArena;
 }

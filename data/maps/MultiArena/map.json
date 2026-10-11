@@ -18,8 +18,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MAN",
-      "x": 20,
-      "y": 15,
+      "x": 28,
+      "y": 16,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -32,8 +32,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
-      "x": 10,
-      "y": 13,
+      "x": 16,
+      "y": 20,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -46,8 +46,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BOY",
-      "x": 28,
-      "y": 23,
+      "x": 37,
+      "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -60,8 +60,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
-      "x": 12,
-      "y": 30,
+      "x": 19,
+      "y": 32,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -74,8 +74,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
-      "x": 28,
-      "y": 12,
+      "x": 34,
+      "y": 16,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -88,8 +88,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "x": 8,
-      "y": 22,
+      "x": 15,
+      "y": 26,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -102,8 +102,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
-      "x": 18,
-      "y": 21,
+      "x": 29,
+      "y": 28,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -116,29 +116,29 @@
   ],
   "warp_events": [
     {
-      "x": 6,
-      "y": 8,
+      "x": 17,
+      "y": 17,
       "elevation": 0,
       "dest_map": "MAP_MULTI_ARENA_MART",
       "dest_warp_id": "0"
     },
     {
-      "x": 6,
-      "y": 20,
+      "x": 40,
+      "y": 17,
       "elevation": 0,
       "dest_map": "MAP_MULTI_ARENA_CENTER",
       "dest_warp_id": "0"
     },
     {
-      "x": 31,
-      "y": 17,
+      "x": 41,
+      "y": 38,
       "elevation": 0,
       "dest_map": "MAP_MULTI_ARENA_VENDOR",
       "dest_warp_id": "0"
     },
     {
-      "x": 20,
-      "y": 11,
+      "x": 28,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_MULTI_ARENA_COLOSSEUM",
       "dest_warp_id": "0"
@@ -147,16 +147,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 1,
-      "y": 23,
-      "elevation": 3,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "MultiArena_Exit"
-    },
-    {
-      "type": "trigger",
-      "x": 1,
+      "x": 2,
       "y": 24,
       "elevation": 3,
       "var": "VAR_TEMP_0",
@@ -165,8 +156,17 @@
     },
     {
       "type": "trigger",
-      "x": 1,
+      "x": 2,
       "y": 25,
+      "elevation": 3,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "MultiArena_Exit"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 26,
       "elevation": 3,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -176,16 +176,16 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 31,
-      "y": 7,
+      "x": 11,
+      "y": 38,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "MultiArena_Lodge"
     },
     {
       "type": "sign",
-      "x": 5,
-      "y": 29,
+      "x": 21,
+      "y": 38,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "MultiArena_Lodge"
@@ -193,11 +193,10 @@
     {
       "type": "sign",
       "x": 31,
-      "y": 29,
+      "y": 38,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "MultiArena_Lodge"
     }
   ]
 }
-

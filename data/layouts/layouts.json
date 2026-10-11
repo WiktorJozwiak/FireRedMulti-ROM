@@ -4402,8 +4402,8 @@
     {
       "id": "LAYOUT_MULTI_ARENA",
       "name": "MultiArena_Layout",
-      "width": 40,
-      "height": 36,
+      "width": 56,
+      "height": 48,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
