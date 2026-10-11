@@ -142,3 +142,12 @@ MultiArena_GateSign::
 	end
 MultiArena_GateSignText::
 	.string "MULTI ARENA\nFollow the path east!$"
+
+MultiArena_Fountain::
+	lock
+	faceplayer
+	msgbox MultiArena_FountainText, MSGBOX_DEFAULT
+	release
+	end
+MultiArena_FountainText::
+	.string "I love resting by this fountain.\nThe arena can get so lively!$"
