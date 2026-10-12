@@ -12,7 +12,7 @@ MultiArena_Entrance::
 	end
 MultiArena_Exit::
 	lockall
-	warp MAP_CERULEAN_CITY, 255, 44, 27
+	warp MAP_CERULEAN_CITY, 255, 42, 27
 	waitstate
 	releaseall
 	end
