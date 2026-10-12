@@ -271,6 +271,10 @@ anim=SECOND/'anim';anim.mkdir(exist_ok=True)
 for i,frame in enumerate(fountainFrames):
     packed=bytes(t[k]|t[k+1]<<4 for t in frame for k in range(0,64,2))
     (anim/f'fountain_{i}.4bpp').write_bytes(packed)
+    image=Image.new('P',(64,64));image.putpalette(sum(map(list,palettes[2]),[])+[0]*720)
+    for n,tile in enumerate(frame):
+        part=Image.new('P',(8,8));part.putdata(tile);image.paste(part,(n%8*8,n//8*8))
+    image.save(anim/f'fountain_{i}.png')
 assert len(tiles)<=1024,('GBA tile capacity exceeded',len(tiles))
 assert len(metas)<640,('primary metatile capacity exceeded',len(metas))
 layers={n:{} for n in ['ground','cliffs/water','buildings','decoration','above_player']}
