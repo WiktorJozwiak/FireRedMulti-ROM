@@ -4,8 +4,8 @@
   "metatiles": 355,
   "paletteBanks": 13,
   "colorsPerBank": 16,
-  "reachableCells": 813,
-  "sealedIsolatedCells": 169,
+  "reachableCells": 824,
+  "sealedIsolatedCells": 167,
   "doorApproaches": [
     [
       9,
@@ -22,10 +22,6 @@
     [
       24,
       6
-    ],
-    [
-      34,
-      36
     ],
     [
       9,
@@ -515,6 +511,22 @@
       "palette": 8
     }
   },
-  "warpRoundTrips": 12,
-  "kitBinaryFormatsValidated": 15
+  "buildingDoors": 11,
+  "returnWarps": "PASS",
+  "greenHouseRemoved": true,
+  "interiors": [
+    "MultiArena_Mart",
+    "MultiArena_Center",
+    "MultiArena_Vendor",
+    "MultiArena_Colosseum",
+    "MultiArena_House1",
+    "MultiArena_House2",
+    "MultiArena_House3",
+    "MultiArena_House4",
+    "MultiArena_House5",
+    "MultiArena_House6",
+    "MultiArena_House7"
+  ],
+  "compile": "PASS - GitHub Actions 38228564428, commit 7c40fe0",
+  "emulator": "PASS: load arena; visible player and NPCs; keyboard movement; south house7 entry and return; yellow house5 entry and return"
 }
