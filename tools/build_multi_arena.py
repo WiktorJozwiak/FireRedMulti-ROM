@@ -238,7 +238,7 @@ def define(name,ground=None):
             fg=[]
             for q in range(4):fg.append(subtile(im.crop((x+q%2*8,y+q//2*8,x+q%2*8+8,y+q//2*8+8)).getdata())|pal<<12)
             bg=metas[definitions[ground][0][0]][4:] if ground else [0]*4
-            row.append(len(metas));metas.append(bg+fg);attrs.append(0)
+            row.append(len(metas));metas.append(bg+fg);attrs.append(0x20000000)
         grid.append(row)
     definitions[name]=grid
 for n in ['grass_0','grass_1','grass_2','grass_3','pavement_0','pavement_1','pavement_2','water_0','water_1']:define(n)
@@ -324,7 +324,7 @@ def place(name,x,y,layer='decoration',blocked=True,door=None,walkrows=()):
             layers[layer][(x+i,y+j)]=mid
             collision[(x+i,y+j)]=blocked and j not in walkrows and (i,j)!=door
             occupied.append([x+i,y+j])
-            if (i,j)==door:attrs[mid]=0x69
+            if (i,j)==door:attrs[mid]=0x20000069
     placements.append(dict(asset=name,x=x,y=y,layer=layer,occupied=occupied))
 place('arena',18,1,'buildings',door=(6,4),walkrows=(5,6))
 # Repeated native 80px houses establish one consistent scale.
@@ -422,7 +422,7 @@ for i,(x,y) in enumerate(houses,1):
             if (xx,y+1) in roads:break
 # Mart door is in the lower blue hall; clear its actual doorstep.
 for x,y,dest in doors:
-    data[y*W+x]=(data[y*W+x]&1023)|0x3000;attrs[data[y*W+x]&1023]=0x69
+    data[y*W+x]=(data[y*W+x]&1023)|0x3000;attrs[data[y*W+x]&1023]=0x20000069
 mapfile=ROOT/'data/maps/MultiArena/map.json';m=json.loads(mapfile.read_text())
 m['warp_events']=[dict(x=x,y=y,elevation=3,dest_map=dest,dest_warp_id='0') for x,y,dest in doors]
 # Interior warp indices retain Center=1, Mart=0 from the existing format.
