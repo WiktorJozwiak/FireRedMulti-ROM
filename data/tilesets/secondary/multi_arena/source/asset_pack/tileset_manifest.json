@@ -1,0 +1,169 @@
+{
+  "tile_size": 16,
+  "sheet_size": [
+    128,
+    80
+  ],
+  "tiles": {
+    "grass_0": {
+      "col": 0,
+      "row": 0
+    },
+    "grass_1": {
+      "col": 1,
+      "row": 0
+    },
+    "grass_2": {
+      "col": 2,
+      "row": 0
+    },
+    "grass_3": {
+      "col": 3,
+      "row": 0
+    },
+    "pavement_0": {
+      "col": 4,
+      "row": 0
+    },
+    "pavement_1": {
+      "col": 5,
+      "row": 0
+    },
+    "pavement_2": {
+      "col": 6,
+      "row": 0
+    },
+    "water_0": {
+      "col": 7,
+      "row": 0
+    },
+    "water_1": {
+      "col": 0,
+      "row": 1
+    },
+    "cliff_0": {
+      "col": 1,
+      "row": 1
+    },
+    "cliff_1": {
+      "col": 2,
+      "row": 1
+    },
+    "path_edge_n": {
+      "col": 3,
+      "row": 1
+    },
+    "path_edge_s": {
+      "col": 4,
+      "row": 1
+    },
+    "path_edge_w": {
+      "col": 5,
+      "row": 1
+    },
+    "path_edge_e": {
+      "col": 6,
+      "row": 1
+    },
+    "fence_horizontal": {
+      "col": 7,
+      "row": 1
+    },
+    "fence_vertical": {
+      "col": 0,
+      "row": 2
+    },
+    "fence_end_left": {
+      "col": 1,
+      "row": 2
+    },
+    "fence_end_right": {
+      "col": 2,
+      "row": 2
+    },
+    "fence_end_top": {
+      "col": 3,
+      "row": 2
+    },
+    "fence_end_bottom": {
+      "col": 4,
+      "row": 2
+    },
+    "fence_corner_nw": {
+      "col": 5,
+      "row": 2
+    },
+    "fence_corner_ne": {
+      "col": 6,
+      "row": 2
+    },
+    "fence_corner_sw": {
+      "col": 7,
+      "row": 2
+    },
+    "fence_corner_se": {
+      "col": 0,
+      "row": 3
+    },
+    "fence_post": {
+      "col": 1,
+      "row": 3
+    },
+    "flowerbed_center": {
+      "col": 2,
+      "row": 3
+    },
+    "flowerbed_top": {
+      "col": 3,
+      "row": 3
+    },
+    "flowerbed_bottom": {
+      "col": 4,
+      "row": 3
+    },
+    "flowerbed_left": {
+      "col": 5,
+      "row": 3
+    },
+    "flowerbed_right": {
+      "col": 6,
+      "row": 3
+    },
+    "flowerbed_nw": {
+      "col": 7,
+      "row": 3
+    },
+    "flowerbed_ne": {
+      "col": 0,
+      "row": 4
+    },
+    "flowerbed_sw": {
+      "col": 1,
+      "row": 4
+    },
+    "flowerbed_se": {
+      "col": 2,
+      "row": 4
+    },
+    "stairs": {
+      "col": 3,
+      "row": 4
+    },
+    "wood_dock": {
+      "col": 4,
+      "row": 4
+    },
+    "coast_foam": {
+      "col": 5,
+      "row": 4
+    },
+    "hedge_straight": {
+      "col": 6,
+      "row": 4
+    },
+    "hedge_corner": {
+      "col": 7,
+      "row": 4
+    }
+  }
+}

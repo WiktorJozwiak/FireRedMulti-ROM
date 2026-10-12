@@ -1,0 +1,520 @@
+{
+  "tiles": 979,
+  "tileLimit": 1024,
+  "metatiles": 355,
+  "paletteBanks": 13,
+  "colorsPerBank": 16,
+  "reachableCells": 813,
+  "sealedIsolatedCells": 169,
+  "doorApproaches": [
+    [
+      9,
+      33
+    ],
+    [
+      33,
+      16
+    ],
+    [
+      13,
+      13
+    ],
+    [
+      24,
+      6
+    ],
+    [
+      34,
+      36
+    ],
+    [
+      9,
+      19
+    ],
+    [
+      40,
+      15
+    ],
+    [
+      10,
+      26
+    ],
+    [
+      37,
+      26
+    ],
+    [
+      36,
+      33
+    ],
+    [
+      17,
+      37
+    ],
+    [
+      28,
+      37
+    ],
+    [
+      1,
+      13
+    ],
+    [
+      23,
+      40
+    ]
+  ],
+  "allNPCsReachable": true,
+  "assets": {
+    "arena": {
+      "size": [
+        192,
+        112
+      ],
+      "palette": 3
+    },
+    "blue": {
+      "size": [
+        80,
+        80
+      ],
+      "palette": 4
+    },
+    "red": {
+      "size": [
+        80,
+        80
+      ],
+      "palette": 5
+    },
+    "green": {
+      "size": [
+        80,
+        80
+      ],
+      "palette": 6
+    },
+    "yellow": {
+      "size": [
+        80,
+        80
+      ],
+      "palette": 7
+    },
+    "rewards": {
+      "size": [
+        96,
+        80
+      ],
+      "palette": 8
+    },
+    "fountain": {
+      "size": [
+        64,
+        64
+      ],
+      "palette": 2
+    },
+    "bench": {
+      "size": [
+        32,
+        16
+      ],
+      "palette": 9
+    },
+    "lamp": {
+      "size": [
+        16,
+        32
+      ],
+      "palette": 9
+    },
+    "statue": {
+      "size": [
+        32,
+        48
+      ],
+      "palette": 9
+    },
+    "flowers": {
+      "size": [
+        32,
+        32
+      ],
+      "palette": 0
+    },
+    "cliff_0": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 2
+    },
+    "cliff_1": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 2
+    },
+    "coast_foam": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 2
+    },
+    "fence_corner_ne": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 1
+    },
+    "fence_corner_nw": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 1
+    },
+    "fence_corner_se": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 1
+    },
+    "fence_corner_sw": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 1
+    },
+    "fence_end_bottom": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 1
+    },
+    "fence_end_left": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 1
+    },
+    "fence_end_right": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 1
+    },
+    "fence_end_top": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 1
+    },
+    "fence_horizontal": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 1
+    },
+    "fence_post": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 1
+    },
+    "fence_vertical": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 1
+    },
+    "flowerbed_bottom": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 0
+    },
+    "flowerbed_center": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 0
+    },
+    "flowerbed_left": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 0
+    },
+    "flowerbed_ne": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 0
+    },
+    "flowerbed_nw": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 0
+    },
+    "flowerbed_right": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 0
+    },
+    "flowerbed_se": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 0
+    },
+    "flowerbed_sw": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 0
+    },
+    "flowerbed_top": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 0
+    },
+    "grass_0": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 11
+    },
+    "grass_1": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 11
+    },
+    "grass_2": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 11
+    },
+    "grass_3": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 11
+    },
+    "hedge_corner": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 0
+    },
+    "hedge_straight": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 0
+    },
+    "path_edge_e": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 1
+    },
+    "path_edge_n": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 1
+    },
+    "path_edge_s": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 1
+    },
+    "path_edge_w": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 1
+    },
+    "pavement_0": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 1
+    },
+    "pavement_1": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 1
+    },
+    "pavement_2": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 1
+    },
+    "stairs": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 1
+    },
+    "water_0": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 12
+    },
+    "water_1": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 12
+    },
+    "wood_dock": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 1
+    },
+    "tree0": {
+      "size": [
+        32,
+        48
+      ],
+      "palette": 10
+    },
+    "tree1": {
+      "size": [
+        32,
+        48
+      ],
+      "palette": 10
+    },
+    "tree2": {
+      "size": [
+        32,
+        48
+      ],
+      "palette": 10
+    },
+    "shore_n": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 2
+    },
+    "shore_s": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 2
+    },
+    "shore_e": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 2
+    },
+    "shore_w": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 2
+    },
+    "shore_se": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 2
+    },
+    "shore_sw": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 2
+    },
+    "shore_ne": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 2
+    },
+    "shore_nw": {
+      "size": [
+        16,
+        16
+      ],
+      "palette": 2
+    },
+    "mart": {
+      "size": [
+        80,
+        64
+      ],
+      "palette": 4
+    },
+    "center": {
+      "size": [
+        80,
+        80
+      ],
+      "palette": 8
+    }
+  },
+  "warpRoundTrips": 12,
+  "kitBinaryFormatsValidated": 15
+}

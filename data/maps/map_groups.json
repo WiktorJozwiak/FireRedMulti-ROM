@@ -241,7 +241,15 @@
     "MultiArena_Mart",
     "MultiArena_Center",
     "MultiArena_Vendor",
-    "MultiArena_Colosseum"
+    "MultiArena_Colosseum",
+    "MultiArena_House",
+    "MultiArena_House1",
+    "MultiArena_House2",
+    "MultiArena_House3",
+    "MultiArena_House4",
+    "MultiArena_House5",
+    "MultiArena_House6",
+    "MultiArena_House7"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",

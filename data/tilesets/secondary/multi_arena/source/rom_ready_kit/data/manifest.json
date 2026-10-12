@@ -1,0 +1,164 @@
+{
+  "format": "gba_4bpp_indexed",
+  "tile_size": [
+    8,
+    8
+  ],
+  "logical_map_metatile": [
+    16,
+    16
+  ],
+  "note": "Each sprite has own 16-color BGR555 palette. NOT a preinstalled pokefirered tileset. Import sprites into metatiles and consolidate palettes per engine limitations.",
+  "assets": [
+    {
+      "name": "arena_192x112",
+      "png": "gfx/objects/arena_192x112.png",
+      "4bpp": "gfx/objects/arena_192x112.4bpp",
+      "palette": "gfx/objects/arena_192x112.gbapal",
+      "width": 192,
+      "height": 112,
+      "tile_count_8x8": 336,
+      "colors_including_transparent": 16
+    },
+    {
+      "name": "reward_shop_96x80",
+      "png": "gfx/objects/reward_shop_96x80.png",
+      "4bpp": "gfx/objects/reward_shop_96x80.4bpp",
+      "palette": "gfx/objects/reward_shop_96x80.gbapal",
+      "width": 96,
+      "height": 80,
+      "tile_count_8x8": 120,
+      "colors_including_transparent": 16
+    },
+    {
+      "name": "house_1_80x80",
+      "png": "gfx/objects/house_1_80x80.png",
+      "4bpp": "gfx/objects/house_1_80x80.4bpp",
+      "palette": "gfx/objects/house_1_80x80.gbapal",
+      "width": 80,
+      "height": 80,
+      "tile_count_8x8": 100,
+      "colors_including_transparent": 16
+    },
+    {
+      "name": "house_2_80x80",
+      "png": "gfx/objects/house_2_80x80.png",
+      "4bpp": "gfx/objects/house_2_80x80.4bpp",
+      "palette": "gfx/objects/house_2_80x80.gbapal",
+      "width": 80,
+      "height": 80,
+      "tile_count_8x8": 100,
+      "colors_including_transparent": 16
+    },
+    {
+      "name": "house_3_80x80",
+      "png": "gfx/objects/house_3_80x80.png",
+      "4bpp": "gfx/objects/house_3_80x80.4bpp",
+      "palette": "gfx/objects/house_3_80x80.gbapal",
+      "width": 80,
+      "height": 80,
+      "tile_count_8x8": 100,
+      "colors_including_transparent": 16
+    },
+    {
+      "name": "house_4_80x80",
+      "png": "gfx/objects/house_4_80x80.png",
+      "4bpp": "gfx/objects/house_4_80x80.4bpp",
+      "palette": "gfx/objects/house_4_80x80.gbapal",
+      "width": 80,
+      "height": 80,
+      "tile_count_8x8": 100,
+      "colors_including_transparent": 16
+    },
+    {
+      "name": "fountain_frame_1_48x64",
+      "png": "gfx/objects/fountain_frame_1_48x64.png",
+      "4bpp": "gfx/objects/fountain_frame_1_48x64.4bpp",
+      "palette": "gfx/objects/fountain_frame_1_48x64.gbapal",
+      "width": 48,
+      "height": 64,
+      "tile_count_8x8": 48,
+      "colors_including_transparent": 16
+    },
+    {
+      "name": "fountain_frame_2_48x64",
+      "png": "gfx/objects/fountain_frame_2_48x64.png",
+      "4bpp": "gfx/objects/fountain_frame_2_48x64.4bpp",
+      "palette": "gfx/objects/fountain_frame_2_48x64.gbapal",
+      "width": 48,
+      "height": 64,
+      "tile_count_8x8": 48,
+      "colors_including_transparent": 16
+    },
+    {
+      "name": "fountain_frame_3_48x64",
+      "png": "gfx/objects/fountain_frame_3_48x64.png",
+      "4bpp": "gfx/objects/fountain_frame_3_48x64.4bpp",
+      "palette": "gfx/objects/fountain_frame_3_48x64.gbapal",
+      "width": 48,
+      "height": 64,
+      "tile_count_8x8": 48,
+      "colors_including_transparent": 16
+    },
+    {
+      "name": "fountain_frame_4_48x64",
+      "png": "gfx/objects/fountain_frame_4_48x64.png",
+      "4bpp": "gfx/objects/fountain_frame_4_48x64.4bpp",
+      "palette": "gfx/objects/fountain_frame_4_48x64.gbapal",
+      "width": 48,
+      "height": 64,
+      "tile_count_8x8": 48,
+      "colors_including_transparent": 16
+    },
+    {
+      "name": "bench_32x16",
+      "png": "gfx/objects/bench_32x16.png",
+      "4bpp": "gfx/objects/bench_32x16.4bpp",
+      "palette": "gfx/objects/bench_32x16.gbapal",
+      "width": 32,
+      "height": 16,
+      "tile_count_8x8": 8,
+      "colors_including_transparent": 14
+    },
+    {
+      "name": "lamp_16x32",
+      "png": "gfx/objects/lamp_16x32.png",
+      "4bpp": "gfx/objects/lamp_16x32.4bpp",
+      "palette": "gfx/objects/lamp_16x32.gbapal",
+      "width": 16,
+      "height": 32,
+      "tile_count_8x8": 8,
+      "colors_including_transparent": 16
+    },
+    {
+      "name": "statue_32x48",
+      "png": "gfx/objects/statue_32x48.png",
+      "4bpp": "gfx/objects/statue_32x48.4bpp",
+      "palette": "gfx/objects/statue_32x48.gbapal",
+      "width": 32,
+      "height": 48,
+      "tile_count_8x8": 24,
+      "colors_including_transparent": 16
+    },
+    {
+      "name": "flowerbed_32x32",
+      "png": "gfx/objects/flowerbed_32x32.png",
+      "4bpp": "gfx/objects/flowerbed_32x32.4bpp",
+      "palette": "gfx/objects/flowerbed_32x32.gbapal",
+      "width": 32,
+      "height": 32,
+      "tile_count_8x8": 16,
+      "colors_including_transparent": 16
+    },
+    {
+      "name": "terrain_atlas_128x80",
+      "png": "gfx/terrain/terrain_atlas_128x80.png",
+      "4bpp": "gfx/terrain/terrain_atlas_128x80.4bpp",
+      "palette": "gfx/terrain/terrain_atlas_128x80.gbapal",
+      "width": 128,
+      "height": 80,
+      "tile_count_8x8": 160,
+      "colors_including_transparent": 16
+    }
+  ]
+}
