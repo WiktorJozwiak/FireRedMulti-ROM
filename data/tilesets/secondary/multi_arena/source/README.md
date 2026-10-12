@@ -2,12 +2,12 @@
 
 The map now uses its own primary and secondary tilesets. Buildings, trees,
 paving, fences, benches, lamps, statue, gardens, shoreline and bridge assets
-were extracted from the owner's image `Symetryczne miasto areny nad wod¹.png`.
+were extracted from the owner's image `Symetryczne miasto areny nad wodï¿½.png`.
 Colosseum and fountain also use the separately supplied PNG artwork.
 Original user files remain unchanged. Native-resolution indexed sources are
 in `source/reference`. GBA transparent color is index zero.
 
-1009 of 1024 background tile slots; 13 independent 15-color palettes.
+1007 of 1024 background tile slots; 13 independent 15-color palettes.
 Primary bank: 640 tiles; secondary bank: 384 slots. Native General/Cerulean
 terrain is not used by this district. Other maps retain their own tilesets.
 The fountain rim is stable; only its blue water pixels animate.
@@ -18,3 +18,9 @@ colosseum (24,4). Return from colosseum (24,5).
 
 The earlier imagegen decorations in source/bench.png, lamp.png and statue.png
 are retained as unused variants. The current map uses the reference crops.
+
+Supplied sheets are preserved in source/supplied. Clean house sprites replace
+red houses, the blue hall, green house and gold rewards vendor; grass and
+paving are taken from the supplied terrain sheet. Other sheets are retained
+for further refinement.
+
