@@ -333,7 +333,7 @@ place('rewards',30,11,'buildings',door=(3,4))
 place('red',8,14,'buildings');place('yellow',39,10,'buildings')
 place('red',9,21,'buildings');place('blue',35,21,'buildings')
 place('center',7,28,'buildings',door=(2,4));place('yellow',35,28,'buildings')
-place('green',32,31,'buildings',door=(2,4));place('red',16,32,'buildings');place('red',27,32,'buildings')
+place('red',16,32,'buildings');place('red',27,32,'buildings')
 # Explicit pedestrian approaches in front of service doors.
 for x,y,w,h in [(13,14,3,5),(32,16,3,3),(22,7,4,4),(8,33,4,2)]:
     rectroad(x,y,w,h)
@@ -408,7 +408,7 @@ final={}
 for layer in layers:
     for p,mid in layers[layer].items():final[p]=mid
 data=[final[(x,y)]|(0x400 if collision.get((x,y)) else 0x3000) for y in range(H) for x in range(W)]
-doors=[(9,32,'MAP_MULTI_ARENA_CENTER'),(33,15,'MAP_MULTI_ARENA_VENDOR'),(13,12,'MAP_MULTI_ARENA_MART'),(24,5,'MAP_MULTI_ARENA_COLOSSEUM'),(34,35,'MAP_MULTI_ARENA_HOUSE')]
+doors=[(9,32,'MAP_MULTI_ARENA_CENTER'),(33,15,'MAP_MULTI_ARENA_VENDOR'),(13,12,'MAP_MULTI_ARENA_MART'),(24,5,'MAP_MULTI_ARENA_COLOSSEUM')]
 # Every visible residence has a separate interior and a matching return warp.
 houses=[(9,18),(40,14),(10,25),(37,25),(36,32),(17,36),(28,36)]
 for i,(x,y) in enumerate(houses,1):
@@ -423,13 +423,10 @@ for i,(x,y) in enumerate(houses,1):
 # Mart door is in the lower blue hall; clear its actual doorstep.
 for x,y,dest in doors:
     data[y*W+x]=(data[y*W+x]&1023)|0x3000;attrs[data[y*W+x]&1023]=0x69
-# A broad front walk links the green house to the southern promenade.
-for yy in [36,37]:
-    for xx in range(32,37):data[yy*W+xx]=definitions['pavement_0'][0][0]|0x3000
 mapfile=ROOT/'data/maps/MultiArena/map.json';m=json.loads(mapfile.read_text())
 m['warp_events']=[dict(x=x,y=y,elevation=3,dest_map=dest,dest_warp_id='0') for x,y,dest in doors]
 # Interior warp indices retain Center=1, Mart=0 from the existing format.
-m['warp_events']=[m['warp_events'][2],m['warp_events'][0],m['warp_events'][1],m['warp_events'][3],m['warp_events'][4]]+m['warp_events'][5:]
+m['warp_events']=[m['warp_events'][2],m['warp_events'][0],m['warp_events'][1],m['warp_events'][3]]+m['warp_events'][4:]
 m['coord_events']=[dict(type='trigger',x=1,y=y,elevation=3,var='VAR_TEMP_0',var_value='0',script='MultiArena_Exit') for y in [12,13]]
 groupsfile=ROOT/'data/maps/map_groups.json';groups=json.loads(groupsfile.read_text())
 eventsfile=ROOT/'data/event_scripts.s';events=eventsfile.read_text()
@@ -437,7 +434,7 @@ for i,(x,y) in enumerate(houses,1):
     name=f'MultiArena_House{i}';folder=ROOT/'data/maps'/name;folder.mkdir(exist_ok=True)
     house=json.loads((ROOT/'data/maps/MultiArena_House/map.json').read_text())
     house.update(id=f'MAP_MULTI_ARENA_HOUSE{i}',name=name)
-    for warp in house['warp_events']:warp['dest_warp_id']=str(4+i)
+    for warp in house['warp_events']:warp['dest_warp_id']=str(3+i)
     for obj in house['object_events']:obj['script']=f'{name}_Welcome'
     (folder/'map.json').write_text(json.dumps(house,indent=2)+'\n')
     (folder/'scripts.inc').write_text(f'{name}_MapScripts::\n\t.byte 0\n{name}_Welcome::\n\tlock\n\tfaceplayer\n\tmsgbox {name}_Text, MSGBOX_DEFAULT\n\trelease\n\tend\n{name}_Text::\n\t.string "Welcome to our ARENA town!$"\n')

@@ -144,13 +144,6 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 34,
-      "y": 35,
-      "elevation": 3,
-      "dest_map": "MAP_MULTI_ARENA_HOUSE",
-      "dest_warp_id": "0"
-    },
-    {
       "x": 9,
       "y": 18,
       "elevation": 3,

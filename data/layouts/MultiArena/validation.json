@@ -4,8 +4,8 @@
   "metatiles": 355,
   "paletteBanks": 13,
   "colorsPerBank": 16,
-  "reachableCells": 813,
-  "sealedIsolatedCells": 169,
+  "reachableCells": 824,
+  "sealedIsolatedCells": 167,
   "doorApproaches": [
     [
       9,
@@ -22,10 +22,6 @@
     [
       24,
       6
-    ],
-    [
-      34,
-      36
     ],
     [
       9,
